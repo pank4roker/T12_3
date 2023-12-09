@@ -41,7 +41,7 @@ namespace T12_3
                 triag.Per();*/
 
                 //Task4
-                Car car1 = new Car();
+                /*Car car1 = new Car();
                 car1.mark = "Lexus";
                 car1.model = "LFA";
                 car1.number = "Т 666 КА";
@@ -52,12 +52,18 @@ namespace T12_3
                 car1.model = "Supra";
                 car1.number = "Т 999 TT";
                 car1.Start();
-                car1.Stop();
-
-
-
-
-
+                car1.Stop();*/
+                //Task5
+                Newspaper newspaper = new Newspaper("24часовая",5000,10);
+                newspaper.Info();
+                Write($"Введите название новой газеты: ");
+                string Newname = Console.ReadLine();
+                newspaper.ChangeName(Newname);
+                Write("Введите новое количество полос для газеты: ");
+                int Newlanes = Convert.ToInt32(Console.ReadLine());
+                newspaper.ChangeNumber(Newlanes);
+                WriteLine("\nОбновленная газета\n");
+                newspaper.Info();
             }
             catch (Exception ex)
             {
